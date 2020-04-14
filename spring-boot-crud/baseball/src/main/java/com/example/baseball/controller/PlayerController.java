@@ -49,7 +49,7 @@ public class PlayerController {
 		return "redirect:/players";
 	}
 
-	@PutMapping("{id}")
+	@PostMapping("{id}")
 	public String update(@PathVariable Long id, @ModelAttribute Player player) {
 		player.setId(id);
 		playerService.update(player);
