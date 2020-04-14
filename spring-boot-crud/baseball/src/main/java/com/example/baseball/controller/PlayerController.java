@@ -56,7 +56,7 @@ public class PlayerController {
 		return "redirect:/players";
 	}
 
-	@DeleteMapping("{id}")
+	@PostMapping("{id}/destroy")
 	public String destroy(@PathVariable Long id) {
 		playerService.delete(id);
 		return "redirect:/players";
