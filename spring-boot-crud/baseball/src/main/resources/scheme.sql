@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS player (
   team varchar(255) DEFAULT NULL,
   position varchar(255) DEFAULT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
