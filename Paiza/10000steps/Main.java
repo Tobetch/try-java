@@ -5,11 +5,17 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int d = sc.nextInt();
-        int s = sc.nextInt();
-        sc.close();
-        String yn = (convertKmToCm(d) / s >= 10000) ? "yes" : "no";
-        System.out.println(yn);
+        String yn = "";
+        try {
+            int d = sc.nextInt();
+            int s = sc.nextInt();
+            yn = (convertKmToCm(d) / s >= 10000) ? "yes" : "no";
+        } catch (Exception e) {
+            System.out.println("Please input valid data");
+        } finally {
+            sc.close();
+        }
+        System.out.printf("Is over 10000 steps? => %s", yn);
     }
 
     private static int convertKmToCm(int km) {
